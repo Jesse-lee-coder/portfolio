@@ -1,0 +1,72 @@
+.hero-container {
+    max-width: 1440px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    gap: 64px;
+
+    h1 {
+        font-family: Anta;
+        font-size: 80px;
+        color: #F8F5EC;
+        text-align: center;
+    }
+
+    h2 {
+        font-family: Anta;
+        font-size: 40px;
+        color: #F8F5EC;
+        text-align: center;
+    }
+}
+
+.hero-portrait {
+    background-image: url('/assets/img/herosection/background-shape.png');
+    background-repeat: no-repeat;
+    height: 500px;   
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%;
+
+    img {
+        width: 430px;  
+        height: 560px; 
+        object-fit: cover;
+    }
+}
+
+
+.hero-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+        margin-bottom: 16px;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.hero-socials {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.hero-arrow {
+    width: 38px !important;
+    height: 89px !important;
+}
+
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+}

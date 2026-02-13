@@ -1,3 +1,23 @@
-*{
-    margin: 0;
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/josefin-sans-v34-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Anta';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('assets/fonts/anta-v1-latin-regular.woff2') format('woff2');
+}
+
+
+body {
+  background-color: #262E34;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
 }
