@@ -9,5 +9,14 @@
     "skills": "Fähigkeiten",
     "projects": "Projekte",
     "contact": "Kontakt"
-  }
+  },
+
+  "whyMe": {
+  "header": "Warum ich",
+  "location": "Berlin, Deutschland",
+  "remote": "Offen für Remote Arbeit",
+  "text": "Programmieren begeistert mich, weil ich gerne Dinge verstehe und Probleme Schritt für Schritt löse. Ich mag es, wenn aus einer Idee am Ende etwas Funktionierendes entsteht. Dabei arbeite ich strukturiert und bleibe dran, auch wenn es mal kompliziert wird. Im Team tausche ich mich gerne aus, um gemeinsam bessere Lösungen zu finden.",
+  "contactButton": "Kontakt aufnehmen"
+}
+
 }
