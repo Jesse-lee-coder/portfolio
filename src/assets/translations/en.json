@@ -2,5 +2,12 @@
   "heroSection": {
     "name": "Jesse Lee Wauer",
     "role": "Frontend Developer"
+  },
+
+  "navbar": {
+    "whyMe": "Why me?",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
   }
 }
