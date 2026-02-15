@@ -1,0 +1,116 @@
+.my-skills-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  scroll-margin-top: 130px;
+}
+
+.my-skills-section__title {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h3 {
+    font-family: Anta;
+    font-size: 64px;
+    font-weight: 400;
+    color: #89BCD9;
+    margin: 0;
+  }
+}
+
+.my-skills-section__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.my-skills-section__grid {
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px 32px;
+}
+
+.my-skills-section__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  span {
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #89BCD9;
+    text-align: center;
+  }
+}
+
+.my-skills-section__learning {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.my-skills-section__circle {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background-image: url("/assets/img/myskills/background-shape.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 48px;
+  text-align: center;
+}
+
+.learning-title {
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  color: #F8F5EC;
+  margin: 0;
+}
+
+.learning-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.learning-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+
+  span {
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    color: #F8F5EC;
+  }
+}
+
+.learning-text {
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  line-height: 1.5;
+  color: #F8F5EC;
+  margin: 0;
+}

@@ -1,0 +1,50 @@
+<section class="my-skills-section" id="skills">
+
+  <div class="my-skills-section__title">
+    <h3>{{ 'mySkills.header' | translate }}</h3>
+  </div>
+
+  <div class="my-skills-section__content">
+
+    <!-- LEFT: Skill Grid -->
+    <div class="my-skills-section__grid">
+
+      @for (item of skills; track $index) {
+        <div class="my-skills-section__item">
+          <img [src]="item.src" [alt]="item.label">
+          <span>{{ item.label }}</span>
+        </div>
+      }
+
+    </div>
+
+    <!-- RIGHT: Learning Circle -->
+    <div class="my-skills-section__learning">
+
+      <div class="my-skills-section__circle">
+
+        <p class="learning-title">
+          {{ 'mySkills.currentlyLearning.title' | translate }}
+        </p>
+
+        <div class="learning-icons">
+          @for (item of learning; track $index) {
+            <div class="learning-item">
+              <img [src]="item.src" [alt]="item.label">
+              <span>{{ item.label }}</span>
+            </div>
+          }
+        </div>
+
+        <p class="learning-text">
+          {{ 'mySkills.currentlyLearning.goal' | translate }}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+

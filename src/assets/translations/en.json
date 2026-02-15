@@ -17,6 +17,16 @@
   "remote": "Open to remote work",
   "text": "I enjoy coding because I like understanding how things work and solving problems step by step. I find it motivating to turn an idea into something that actually works. I stay focused even when things get complex, and I appreciate working with others to find better solutions together.",
   "contactButton": "Get in touch"
+},
+
+"mySkills": {
+  "header": "My Skills",
+  "currentlyLearning": {
+    "title": "I am currently learning",
+    "goal": "I regularly learn new technologies and deepen my knowledge step by step. This helps me grow my skills and apply them more effectively in my projects."
+
+  }
 }
+
 
 }
