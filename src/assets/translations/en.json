@@ -26,7 +26,34 @@
     "goal": "I regularly learn new technologies and deepen my knowledge step by step. This helps me grow my skills and apply them more effectively in my projects."
 
   }
-}
+},
 
+"myProjects": {
+  "header": "My Projects",
+  "aboutTheProject": "About the project:",
+  "organisation": "Project organisation:",
+  "whatILearned": "What I learned:",
+  "technologies": "Technologies",
+  "liveTest": "Live demo",
+  "github": "GitHub",
+
+  "join": {
+    "aboutTheProject": "Join is a social network project where users can share posts, comment, and like content to connect within a community.",
+    "organisation": "I focused on a clean structure, a clear UI, and connecting data — including authentication/storage with Firebase.",
+    "whatILearned": "I learned how to integrate Firebase data, build features step by step, and keep the overall code structure maintainable."
+  },
+
+  "elPolloLoco": {
+    "aboutTheProject": "A cartoon-style jump and run: collect coins, avoid enemies, and fight your way through the desert to the final boss.",
+    "organisation": "The game is split into level logic, characters, and collision handling. Animation and sound logic are implemented in a structured way.",
+    "whatILearned": "I learned a lot about object-oriented JavaScript, game loops, collision detection, and working with game assets."
+  },
+
+  "pokedex": {
+    "aboutTheProject": "A responsive Pokédex app with interactive cards, type-based colors and icons. Users can scroll and search by name or ID.",
+    "organisation": "Data is loaded via an API and displayed in a clean UI. Search and details are built to stay fast and responsive.",
+    "whatILearned": "I improved my API workflow, data handling, and building a UI that works well on mobile devices."
+  }
+}
 
 }

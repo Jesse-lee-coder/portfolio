@@ -26,7 +26,36 @@
     "goal": "Ich lerne regelmäßig neue Technologien und vertiefe mein Wissen Schritt für Schritt. So kann ich mein Können weiterentwickeln und gezielt in meinen Projekten einsetzen."
 
   }
+},
+
+"myProjects": {
+  "header": "Meine Projekte",
+  "aboutTheProject": "Über das Projekt:",
+  "organisation": "Organisation des Projektes:",
+  "whatILearned": "Lernziel aus dem Projekt:",
+  "technologies": "Technologien",
+  "liveTest": "Live testen",
+  "github": "GitHub",
+
+  "join": {
+    "aboutTheProject": "Join ist ein Social-Network-Projekt, bei dem Nutzer Beiträge teilen, kommentieren und liken können, um sich in einer Community zu vernetzen.",
+    "organisation": "Ich habe den Fokus auf saubere Struktur, übersichtliche UI und die Anbindung von Daten gelegt – inklusive Auth/Storage über Firebase.",
+    "whatILearned": "Ich habe gelernt, wie man Daten mit Firebase einbindet, Features Schritt für Schritt umsetzt und dabei die Code-Struktur sauber hält."
+  },
+
+  "elPolloLoco": {
+    "aboutTheProject": "Ein Cartoon-Style Jump-and-Run: Sammle Münzen, weiche Gegnern aus und kämpfe dich durch die Wüste bis zum Boss.",
+    "organisation": "Das Spiel ist in Level-Logik, Charaktere und Collision-Handling aufgeteilt. Animations- und Sound-Logik wurden sauber getrennt umgesetzt.",
+    "whatILearned": "Ich habe viel über objektorientiertes JavaScript, Game-Loops, Collision-Detection und ein gutes Zusammenspiel von Assets gelernt."
+  },
+
+  "pokedex": {
+    "aboutTheProject": "Eine responsive Pokédex-App mit Kartenansicht, Typ-Farben und Icons. Nutzer können scrollen und nach Name oder ID suchen.",
+    "organisation": "Die Daten werden über eine API geladen und in einer klaren UI dargestellt. Suche und Detailansicht sind so aufgebaut, dass alles schnell reagiert.",
+    "whatILearned": "Ich habe geübt, mit APIs zu arbeiten, Daten zu verarbeiten und eine UI zu bauen, die auch auf Mobile gut funktioniert."
+  }
 }
+
 
 
 }

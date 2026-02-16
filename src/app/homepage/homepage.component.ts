@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
 import { WhyMeSectionComponent } from '../why-me-section/why-me-section.component';
 import { MySkillsSectionComponent } from '../my-skills-section/my-skills-section.component';
+import { MyProjectsSectionComponent } from '../my-projects-section/my-projects-section.component';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { MySkillsSectionComponent } from '../my-skills-section/my-skills-section
   imports: [
     HeroSectionComponent,
     WhyMeSectionComponent,
-    MySkillsSectionComponent
+    MySkillsSectionComponent,
+    MyProjectsSectionComponent
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'
