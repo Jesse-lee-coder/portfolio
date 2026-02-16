@@ -54,7 +54,30 @@
     "organisation": "Die Daten werden über eine API geladen und in einer klaren UI dargestellt. Suche und Detailansicht sind so aufgebaut, dass alles schnell reagiert.",
     "whatILearned": "Ich habe geübt, mit APIs zu arbeiten, Daten zu verarbeiten und eine UI zu bauen, die auch auf Mobile gut funktioniert."
   }
+},
+
+"references": {
+  "header": "Teamplayer benötigt? Das sagen meine Kollegen über mich",
+  "projectTitle": "Projekt:",
+  "linkedin": "LinkedIn Profil ansehen",
+
+  "person1": {
+    "name": "Max Mustermann",
+    "project": "Join (Scrum Teamprojekt)",
+    "review": "Die Zusammenarbeit war super angenehm. Er arbeitet strukturiert, denkt mit und bleibt auch bei Problemen ruhig und lösungsorientiert."
+  },
+  "person2": {
+    "name": "Anna Beispiel",
+    "project": "El Pollo Loco (Spielprojekt)",
+    "review": "Sehr zuverlässig und teamorientiert. Aufgaben werden sauber umgesetzt und man merkt, dass Qualität ihm wichtig ist."
+  },
+  "person3": {
+    "name": "Lukas Demo",
+    "project": "Pokedex (API Projekt)",
+    "review": "Gute Kommunikation und starkes technisches Verständnis. Bringt eigene Ideen ein und unterstützt das Team aktiv."
+  }
 }
+
 
 
 

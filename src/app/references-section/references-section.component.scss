@@ -1,0 +1,108 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.references-section {
+  width: 100%;
+  max-width: 1440px;
+  padding: 80px 24px;
+  scroll-margin-top: 130px;
+}
+
+.references-section__title {
+  font-family: Anta;
+  font-size: 40px;
+  font-weight: 400;
+  color: #89BCD9;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.references-section__grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.reference-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 400px;
+  height: 400px;
+  background-image: url('/assets/img/references/reference-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 26px;
+  color: #F8F5EC;
+}
+
+.reference-card__shape {
+  position: absolute;
+  inset: 0;
+
+}
+
+.reference-card__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 80%;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reference-card__name {
+  font-family: 'Josefin Sans';
+  font-size: 22px;
+  font-weight: 600;
+  color: #FFFDFD;
+  margin: 14px 0 12px;
+}
+
+.reference-card__project {
+  font-family: 'Josefin Sans';
+  font-size: 14px;
+  color: #89BCD9;
+  margin-bottom: 14px;
+}
+
+.reference-card__project-label {
+  font-weight: 500;
+}
+
+.reference-card__project-name {
+  display: block;
+}
+
+.reference-card__text p {
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFDFD;
+  margin: 0 0 16px;
+}
+
+.reference-card__linkedin {
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+  color: #89BCD9;
+  text-decoration: none;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+}
+
+.reference-card__linkedin:hover {
+  text-decoration: underline;
+  color: #FFFDFD;
+}

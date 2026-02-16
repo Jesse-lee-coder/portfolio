@@ -1,0 +1,44 @@
+<section class="references-section" id="references">
+
+  <div class="references-section__title">
+    <h3>{{ 'references.header' | translate }}</h3>
+  </div>
+
+  <div class="references-section__grid">
+    @for (item of references; track item.nameKey) {
+      <article class="reference-card">
+
+        <!-- Background Shape -->
+        <div class="reference-card__shape"></div>
+
+        <!-- Content -->
+        <div class="reference-card__content">
+
+          <h4 class="reference-card__name">{{ item.nameKey | translate }}</h4>
+
+          <div class="reference-card__project">
+            <p class="reference-card__project-label">
+              {{ 'references.projectTitle' | translate }}
+            </p>
+            <p class="reference-card__project-name">{{ item.projectKey | translate }}</p>
+          </div>
+
+          <div class="reference-card__text">
+            <p>{{ item.reviewKey | translate }}</p>
+          </div>
+
+          <a class="reference-card__linkedin"
+             [href]="item.linkedinUrl"
+             target="_blank"
+             rel="noreferrer">
+            {{ 'references.linkedin' | translate }}
+          </a>
+
+        </div>
+
+      </article>
+    }
+  </div>
+
+</section>
+

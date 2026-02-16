@@ -54,6 +54,29 @@
     "organisation": "Data is loaded via an API and displayed in a clean UI. Search and details are built to stay fast and responsive.",
     "whatILearned": "I improved my API workflow, data handling, and building a UI that works well on mobile devices."
   }
+},
+
+"references": {
+  "header": "Need a teamplayer? Here’s what my colleagues say about me",
+  "projectTitle": "Project:",
+  "linkedin": "View LinkedIn profile",
+
+  "person1": {
+    "name": "Max Mustermann",
+    "project": "Join (Scrum team project)",
+    "review": "Working together was great. He stays organized, thinks ahead, and keeps a calm, solution-focused mindset when problems come up."
+  },
+  "person2": {
+    "name": "Anna Beispiel",
+    "project": "El Pollo Loco (game project)",
+    "review": "Very reliable and supportive in a team. Tasks are implemented cleanly and you can tell quality matters to him."
+  },
+  "person3": {
+    "name": "Lukas Demo",
+    "project": "Pokedex (API project)",
+    "review": "Great communication and strong technical understanding. He contributes ideas and actively supports the team."
+  }
 }
+
 
 }
