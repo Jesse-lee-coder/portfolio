@@ -1,0 +1,228 @@
+.contact-form {
+  width: 100%;
+  max-width: 1050px; 
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-form__row {
+  width: 100%;
+  display: flex;
+  gap: 28px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    color: rgba(248, 245, 236, 0.9);
+    padding-left: 12px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-family: 'Josefin Sans';
+    font-size: 16px;
+    color: #F8F5EC;
+    background-color: transparent; 
+    border: 1px solid rgba(137, 188, 217, 0.75);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+
+  input {
+    border-radius: 999px;
+    height: 52px;
+  }
+
+  textarea {
+    border-radius: 22px;
+    min-height: 240px;
+    resize: vertical;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: rgba(137, 188, 217, 1);
+    box-shadow: 0 0 0 3px rgba(137, 188, 217, 0.15);
+  }
+}
+
+.error-slot {
+  display: block;
+  min-height: 16px; 
+}
+
+.error {
+  font-family: 'Josefin Sans';
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(255, 120, 120, 1);
+  display: block;
+  padding-left: 16px;
+}
+
+.contact-form__footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.privacy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    width: 16px;
+    height: 16px;
+    accent-color: #89BCD9;
+    cursor: pointer;
+  }
+
+  label {
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgba(248, 245, 236, 0.85);
+  }
+
+  a {
+    color: #89BCD9;
+    text-decoration: none;
+    margin-left: 6px;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  span {
+    font-family: 'Josefin Sans';
+    font-size: 14px;
+    color: #F8F5EC;
+  }
+
+  a {
+    color: #89BCD9;
+    margin-left: 6px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.checkbox-image {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.15s ease;
+}
+
+.custom-checkbox:hover .checkbox-image {
+  transform: scale(1.08);
+}
+
+.submit {
+  background: transparent;
+  color: rgba(248, 245, 236, 0.9);
+  border: 1px solid rgba(137, 188, 217, 0.75);
+  border-radius: 999px;
+
+  font-family: 'Josefin Sans';
+  font-size: 16px;
+
+  padding: 12px 30px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.submit:hover {
+  border-color: rgba(137, 188, 217, 1);
+  color: #89BCD9;
+  transform: translateY(-1px);
+}
+
+.submit:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.thankyou-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.thankyou-overlay.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.thankyou-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.thankyou-box {
+  width: min(740px, calc(100% - 32px));
+  background-color: #2D383F;
+  border: 1px solid rgba(137, 188, 217, 0.35);
+  border-radius: 22px;
+  padding: 34px 26px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.thankyou-box h3 {
+  font-family: 'Josefin Sans';
+  font-size: 22px;
+  font-weight: 600;
+  color: #F8F5EC;
+  margin: 0;
+}
+
+.thankyou-box h3 + h3 {
+  margin-top: 10px;
+  font-weight: 500;
+  color: rgba(248, 245, 236, 0.9);
+}
+

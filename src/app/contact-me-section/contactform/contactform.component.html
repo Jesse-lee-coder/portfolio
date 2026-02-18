@@ -1,0 +1,118 @@
+<form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+  <div class="contact-form__row">
+
+    <!-- NAME -->
+    <div class="field">
+      <label for="name">{{ 'contactMe.form.name' | translate }}</label>
+      <input
+        [(ngModel)]="contactData.name"
+        name="name"
+        type="text"
+        id="name"
+        required
+        minlength="2"
+        #nameRef="ngModel"
+      >
+
+      <span class="error-slot">
+      @if (!nameRef.valid && nameRef.touched && nameRef.value) {
+      <span class="error">{{ 'contactMe.form.errors.name' | translate }}</span>
+    }</span>
+
+    </div>
+
+    <!-- EMAIL -->
+    <div class="field">
+      <label for="email">{{ 'contactMe.form.email' | translate }}</label>
+      <input
+        [(ngModel)]="contactData.email"
+        name="email"
+        type="text"
+        id="email"
+        required
+        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        #emailRef="ngModel"
+      >
+
+      <span class="error-slot">
+      @if (!emailRef.valid && emailRef.touched && emailRef.value) {
+      <span class="error">{{ 'contactMe.form.errors.email' | translate }}</span>
+      }</span>
+     </div>
+
+  </div>
+
+  <!-- MESSAGE -->
+  <div class="field">
+    <label for="message">{{ 'contactMe.form.message' | translate }}</label>
+    <textarea
+      [(ngModel)]="contactData.message"
+      name="message"
+      id="message"
+      required
+      minlength="10"
+      #messageRef="ngModel"
+    ></textarea>
+
+      <span class="error-slot">
+      @if (!messageRef.valid && messageRef.touched && messageRef.value) {
+      <span class="error">{{ 'contactMe.form.errors.message' | translate }}</span>
+      } </span>
+    </div>
+
+  <!-- PRIVACY + SUBMIT -->
+  <div class="contact-form__footer">
+
+    <div class="privacy">
+
+  <label class="custom-checkbox">
+
+    <input
+      type="checkbox"
+      name="privacyAccepted"
+      [(ngModel)]="privacyAccepted"
+      required
+      #privacyRef="ngModel"
+    />
+
+    <img
+      [src]="getCheckboxImage(privacyRef)"
+      alt="checkbox"
+      class="checkbox-image"
+    />
+
+    <span>
+      {{ 'contactMe.form.privacyText' | translate }}
+      <a routerLink="/privacy">
+        {{ 'contactMe.form.privacyLink' | translate }}
+      </a>
+    </span>
+
+  </label>
+
+</div>
+
+
+    <button
+      type="submit"
+      class="submit"
+      [disabled]="!contactForm.valid || !privacyAccepted"
+    >
+      {{ 'contactMe.form.send' | translate }}
+    </button>
+
+  </div>
+
+</form>
+
+<!-- THANK YOU OVERLAY -->
+<div
+  class="thankyou-overlay"
+  [ngClass]="{ 'visible': thankYouVisible, 'hidden': !thankYouVisible }"
+>
+  <div class="thankyou-box">
+    <h3>{{ 'contactMe.form.thankYou' | translate }}</h3>
+  </div>
+</div>
+

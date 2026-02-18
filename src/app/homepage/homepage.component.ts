@@ -4,7 +4,7 @@ import { WhyMeSectionComponent } from '../why-me-section/why-me-section.componen
 import { MySkillsSectionComponent } from '../my-skills-section/my-skills-section.component';
 import { MyProjectsSectionComponent } from '../my-projects-section/my-projects-section.component';
 import { ReferencesSectionComponent } from '../references-section/references-section.component';
-
+import { ContactMeSectionComponent } from "../contact-me-section/contact-me-section.component";
 
 @Component({
   selector: 'app-homepage',
@@ -14,7 +14,8 @@ import { ReferencesSectionComponent } from '../references-section/references-sec
     WhyMeSectionComponent,
     MySkillsSectionComponent,
     MyProjectsSectionComponent,
-    ReferencesSectionComponent
+    ReferencesSectionComponent,
+    ContactMeSectionComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'

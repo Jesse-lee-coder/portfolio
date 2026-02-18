@@ -76,7 +76,31 @@
     "project": "Pokedex (API project)",
     "review": "Great communication and strong technical understanding. He contributes ideas and actively supports the team."
   }
-}
+},
+
+  "contactMe": {
+    "header": "Contact me",
+    "description": "Do you have an interesting project or idea? Feel free to reach out – I’m looking forward to your message.",
+
+    "email": "wauer.j@hotmail.de",
+    "phone": "+49 157 123 456 68",
+
+    "form": {
+      "name": "Your name",
+      "email": "Your email",
+      "message": "Your message",
+      "privacyText": "I have read the",
+      "privacyLink": "privacy policy",
+      "send": "Send",
+      "thankYou": "Thank you for your message. I will get back to you as soon as possible.",
+      "errors": {
+      "name": "Please enter your name.",
+      "email": "Please enter a valid email address.",
+      "message": "Please enter a message."
+      } 
+    }
+
+  }
 
 
 }

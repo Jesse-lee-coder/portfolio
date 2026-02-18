@@ -1,0 +1,43 @@
+<section class="contact-me-section" id="contact">
+
+  <h2 class="contact-me-section__title">
+    {{ 'contactMe.header' | translate }}
+  </h2>
+
+  <img
+  src="assets/img/contactme/arrow-up.png"
+  alt="Scroll to top"
+  class="contact-me-section__scrolltop"
+  (click)="scrollToTop()"
+/>
+
+
+
+  <div class="contact-me-section__inner">
+    <div class="contact-me-section__top">
+
+      <div class="contact-me-section__info">
+        <p>{{ 'contactMe.description' | translate }}</p>
+      </div>
+
+      <div class="contact-me-section__details">
+        <div class="contact-detail">
+          <img src="assets/img/contactme/email-icon.png" alt="Email icon" class="contact-detail__icon">
+          <p class="contact-detail__text">E-mail: {{ 'contactMe.email' | translate }}</p>
+        </div>
+
+        <div class="contact-detail">
+          <img src="assets/img/contactme/phone-icon.png" alt="Phone icon" class="contact-detail__icon">
+          <p class="contact-detail__text">Tel: {{ 'contactMe.phone' | translate }}</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-me-section__form">
+      <app-contactform></app-contactform>
+    </div>
+  </div>
+
+</section>
+
