@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="footer__inner">
+
+    <!-- Left -->
+    <div class="footer__left">
+      <a class="footer__legal" routerLink="/legal-notice">
+        {{ 'footer.legalNotice' | translate }}
+      </a>
+        <div class="footer__copyright">
+          © Jesse Lee Wauer {{ currentYear }}
+        </div>
+    </div>
+
+    <!-- Center -->
+    <div class="footer__center">
+      <img
+        src="assets/img/footer/name-logo.png"
+        alt="Logo"
+        class="footer__logo"
+      />
+    </div>
+
+    <!-- Right -->
+    <div class="footer__right">
+      <a class="footer__icon" href="https://github.com/" target="_blank" rel="noopener">  <!-- Github Hinzufügen -->
+        <img src="assets/img/footer/github-icon.png" alt="GitHub" />
+      </a>
+
+      <a class="footer__icon" href="mailto:wauer.j@hotmail.de" target="_blank" rel="noopener"> 
+        <img src="assets/img/footer/email-icon.png" alt="E-Mail" />
+      </a>
+
+      <a class="footer__icon" href="https://www.linkedin.com/" target="_blank" rel="noopener"> <!-- LinkedIn Hinzufügen -->
+        <img src="assets/img/footer/linkedin-icon.png" alt="LinkedIn" />
+      </a>
+    </div>
+
+  </div>
+</footer>

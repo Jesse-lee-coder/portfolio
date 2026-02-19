@@ -5,6 +5,8 @@ import { MySkillsSectionComponent } from '../my-skills-section/my-skills-section
 import { MyProjectsSectionComponent } from '../my-projects-section/my-projects-section.component';
 import { ReferencesSectionComponent } from '../references-section/references-section.component';
 import { ContactMeSectionComponent } from "../contact-me-section/contact-me-section.component";
+import { FooterComponent } from '../footer/footer.component';
+
 
 @Component({
   selector: 'app-homepage',
@@ -16,6 +18,7 @@ import { ContactMeSectionComponent } from "../contact-me-section/contact-me-sect
     MyProjectsSectionComponent,
     ReferencesSectionComponent,
     ContactMeSectionComponent,
+    FooterComponent,
   ],
   templateUrl: './homepage.component.html',
   styleUrl: './homepage.component.scss'

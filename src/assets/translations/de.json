@@ -80,7 +80,7 @@
 
   "contactMe": {
     "header": "Contact me",
-    "description": "Du hast ein spannendes Projekt oder eine Idee? Schreib mir gerne – ich freue mich auf deine Nachricht.",
+    "description": "Du hast ein spannendes Projekt oder eine Idee? Schreib mir gerne, ich freue mich auf deine Nachricht.",
 
     "email": "wauer.j@hotmail.de",
     "phone": "0157 123 456 68",
@@ -99,13 +99,53 @@
       "message": "Bitte gib eine Nachricht ein."
     }
     }
+  },
 
-    
+  "footer": {
+  "legalNotice": "Impressum"
+  },
 
+  "legalNotice": {
+  "title": "Impressum",
+  "contactEmail": "wauer.j@hotmail.de",
+  "imprint": {
+    "title": "Impressum",
+    "line1": "Jesse Lee Wauer",
+    "line2": "Lange Straße 81",
+    "line3": "10243 Berlin"
+  },
+  "exploring": {
+    "title": "Board erkunden",
+    "email": "E-Mail"
+  },
+  "acceptance": {
+    "title": "Akzeptanz der Bedingungen",
+    "text": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erkennst du die folgenden Bedingungen sowie alle Richtlinien, Hinweise oder Änderungen an, die dir von Zeit zu Zeit angezeigt werden können. Wir, die genannten Studierenden, können diese Bedingungen jederzeit ohne vorherige Ankündigung aktualisieren oder ändern."
+  },
+  "scope": {
+    "title": "Geltungsbereich und Eigentum am Produkt",
+    "text1": "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webdevelopment-Bootcamp der Developer Akademie GmbH entwickelt. Es dient ausschließlich zu Lernzwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale garantieren.",
+    "text2": "Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Eine unautorisierte Nutzung, Vervielfältigung, Veränderung, Verbreitung oder Nachbildung des Designs ist streng untersagt."
+  },
+  "rights": {
+    "title": "Urheber- und Schutzrechte",
+    "text": "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die genannten Studierenden, alle Schutzrechte an Portfolio, einschließlich sämtlicher urheberrechtlich geschützter Inhalte, Marken und anderer proprietärer Informationen."
+  },
+  "use": {
+    "title": "Nutzung des Produkts",
+    "text": "Portfolio darf ausschließlich für rechtmäßige Zwecke und im Einklang mit allen geltenden Gesetzen und Vorschriften genutzt werden. Jede Nutzung von Portfolio für illegale Aktivitäten oder um andere zu belästigen, zu schädigen, zu bedrohen oder einzuschüchtern, ist strikt untersagt. Du bist allein verantwortlich für deine Interaktionen mit anderen Nutzern von Portfolio."
+  },
+  "disclaimer": {
+    "title": "Haftungsausschluss und Haftungsbegrenzung",
+    "text": "Portfolio wird „wie gesehen“ und ohne Gewährleistung jeglicher Art bereitgestellt – ausdrücklich oder stillschweigend – einschließlich, aber nicht beschränkt auf die stillschweigende Gewährleistung der Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten Dritter. In keinem Fall haften wir, die genannten Studierenden, oder die Developer Akademie für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, aber nicht beschränkt auf entgangenen Gewinn, Verlust von Goodwill, Nutzung, Daten oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die aus oder im Zusammenhang mit der Nutzung oder Leistung von Portfolio entstehen."
+  },
+  "indemnity": {
+    "title": "Freistellung",
+    "text": "Du erklärst dich damit einverstanden, uns, die genannten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, Mitarbeitenden, Organe und Beauftragten von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen (einschließlich angemessener Anwaltskosten) freizustellen und schadlos zu halten, die aus deiner Nutzung von Portfolio und/oder einem Verstoß gegen dieses Impressum resultieren."
+  },
+  "questions": "Bei Fragen oder Hinweisen kontaktiere uns bitte unter",
+  "date": "Datum: 26. Februar 2026"
   }
-
-
-
 
 
 }
