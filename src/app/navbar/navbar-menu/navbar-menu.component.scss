@@ -1,0 +1,110 @@
+:host {
+  display: none; // Desktop: aus
+}
+
+/* Responsive: Burger nur unter 1230px */
+@media screen and (max-width: 1230px) {
+  :host {
+    display: block;
+  }
+}
+
+/* Button oben rechts */
+.menu-trigger {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  z-index: 3000;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  img {
+    width: 34px;
+    height: 34px;
+    display: block;
+  }
+}
+
+/* Fullscreen Overlay (damit man NICHT die andere Navbar sieht) */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+
+  transition: opacity 120ms ease-out;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Bubble mit Background-Shape */
+.menu-bubble {
+  width: 360px;
+  height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+
+  background-image: url('/assets/img/hero/menu-background-shape.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* Links */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+
+  a {
+    font-family: 'Josefin Sans';
+    font-size: 22px;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/* Sprache */
+.menu-lang {
+  display: flex;
+  gap: 18px;
+  margin-top: 6px;
+
+  button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    font-family: 'Josefin Sans';
+    font-size: 18px;
+    color: #111;
+
+    padding: 4px 10px;
+    border-radius: 10px;
+  }
+
+  button.active {
+    background: rgba(255, 255, 255, 0.35);
+  }
+}

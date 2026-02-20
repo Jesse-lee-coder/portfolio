@@ -23,7 +23,7 @@
 
 .navbar-component-logo img {
   height: 140px;
-  width: auto;   
+  width: auto;
 }
 
 .navbar {
@@ -68,5 +68,11 @@ button.active-lang {
   .navbar {
     width: auto;
     padding-left: 16px;
+  }
+}
+
+@media (max-width: 1230px) {
+  .navbar-component {
+    display: none !important;
   }
 }

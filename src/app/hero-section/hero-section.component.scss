@@ -1,72 +1,208 @@
 .hero-container {
-    max-width: 1440px;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    margin: auto;
-    gap: 64px;
+  max-width: 1440px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  gap: 64px;
 
-    h1 {
-        font-family: Anta;
-        font-size: 80px;
-        color: #F8F5EC;
-        text-align: center;
-    }
+  h1 {
+    font-family: Anta;
+    font-size: 80px;
+    color: #F8F5EC;
+    text-align: center;
+  }
 
-    h2 {
-        font-family: Anta;
-        font-size: 40px;
-        color: #F8F5EC;
-        text-align: center;
-    }
+  h2 {
+    font-family: Anta;
+    font-size: 40px;
+    color: #F8F5EC;
+    text-align: center;
+  }
 }
 
 .hero-portrait {
-    background-image: url('/assets/img/hero/background-shape.png');
-    background-repeat: no-repeat;
-    height: 500px;   
-    overflow: hidden;
-    position: relative;
-    border-radius: 50%;
+  background-image: url('/assets/img/hero/background-shape.png');
+  background-repeat: no-repeat;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
 
-    img {
-        width: 430px;  
-        height: 560px; 
-        object-fit: cover;
-    }
+  img {
+    width: 430px;
+    height: 560px;
+    object-fit: cover;
+  }
 }
 
-
 .hero-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    img {
-        margin-bottom: 16px;
-        width: 130px;
-        height: 130px;
-    }
+  img {
+    margin-bottom: 16px;
+    width: 130px;
+    height: 130px;
+  }
 }
 
 .hero-socials {
-    display: flex;
-    height: 80%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
+  display: flex;
+  height: 80%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
 }
 
 .hero-arrow {
-    width: 38px !important;
-    height: 89px !important;
+  width: 38px !important;
+  height: 89px !important;
 }
 
 .hero-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+@media (max-width: 1230px) {
+  .hero-container {
+    gap: 32px;
+  }
+
+  .hero-portrait {
+    height: 520px;
+
+    img {
+      width: 480px;
+      height: 620px;
+    }
+  }
+
+  .hero-container h1 {
+    font-size: 64px;
+  }
+
+  .hero-container h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-container {
+    position: relative;
+  }
+
+  .hero-wrapper {
     align-items: center;
+    width: 100%;
+  }
+
+  .hero-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
     flex-direction: column;
-    margin: auto;
+    justify-content: flex-start;
+    align-items: center;
+
+    gap: 18px;
+    padding: 120px 16px 32px; 
+  }
+
+  .hero-logo {
+    position: absolute;
+    top: -20px;
+    left: 18px;
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    z-index: 20;
+    }
+
+  .hero-portrait {
+    width: 320px;
+    height: 320px;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 285px;
+      height: 321px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 50% 35%; 
+    }
+  }
+
+  .hero-name {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero-container h1 {
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .hero-container h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 10px 0 0;
+  }
+
+  .hero-socials {
+    display: none;
+  }
+
+  .hero-arrow {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 34px !important;
+    height: 78px !important;
+    }
+}
+
+@media (max-width: 420px) {
+  .hero-container {
+    padding-top: 110px;
+  }
+
+  .hero-logo {
+    top: -20px;
+    left: 14px;
+    width: 64px;
+    height: 64px;
+    }
+
+  .hero-portrait {
+    width: 224px;
+    height: 255px;
+
+    img {
+      width: 255px;
+      height: 255px;
+    }
+  }
+
+  .hero-container h1 {
+    font-size: 40px;
+  }
+
+  .hero-container h2 {
+    font-size: 18px;
+  }
 }
