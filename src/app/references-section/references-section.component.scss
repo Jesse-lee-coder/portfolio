@@ -22,13 +22,34 @@
 
 .references-section__grid {
   display: flex;
-  justify-content: center;
   gap: 24px;
   overflow-x: auto;
-  padding-bottom: 20px;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 16px 20px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(137, 188, 217, 0.55) rgba(255, 255, 255, 0.06);
+}
+
+.references-section__grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.references-section__grid::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 999px;
+}
+
+.references-section__grid::-webkit-scrollbar-thumb {
+  background: rgba(137, 188, 217, 0.55);
+  border-radius: 999px;
 }
 
 .reference-card {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
   position: relative;
   flex: 0 0 auto;
   width: 400px;
@@ -48,7 +69,6 @@
 .reference-card__shape {
   position: absolute;
   inset: 0;
-
 }
 
 .reference-card__content {
@@ -105,4 +125,107 @@
 .reference-card__linkedin:hover {
   text-decoration: underline;
   color: #FFFDFD;
+}
+
+@media (max-width: 900px) {
+  .references-section {
+    padding: 72px 16px;
+  }
+
+  .references-section__title {
+    font-size: 34px;
+    margin-bottom: 36px;
+  }
+
+  .references-section__grid {
+    gap: 18px;
+  }
+
+  .reference-card {
+    width: 340px;
+    height: 380px;
+    padding-top: 22px;
+  }
+
+  .reference-card__content {
+    width: 82%;
+    padding: 40px 10px;
+  }
+
+  .reference-card__name {
+    font-size: 20px;
+    margin: 12px 0 10px;
+  }
+
+  .reference-card__project {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .reference-card__text p {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .reference-card__linkedin {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .references-section__title {
+    font-size: 28px;
+  }
+
+  .references-section__grid {
+    gap: 16px;
+    padding: 0 12px 18px;
+  }
+
+  .reference-card {
+    width: 300px;
+    height: 360px;
+    padding-top: 20px;
+  }
+
+  .reference-card__content {
+    width: 84%;
+    padding: 40px 10px;
+  }
+
+  .reference-card__name {
+    font-size: 18px;
+  }
+
+  .reference-card__project {
+    font-size: 12px;
+  }
+
+  .reference-card__text p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .reference-card__linkedin {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .references-section__title {
+    font-size: 24px;
+  }
+
+  .reference-card {
+    width: 270px;
+    height: 350px;
+  }
+
+  .reference-card__name {
+    font-size: 17px;
+  }
+
+  .reference-card__text p {
+    font-size: 13.5px;
+  }
 }

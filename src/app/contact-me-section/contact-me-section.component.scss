@@ -7,6 +7,7 @@
   width: 100%;
   padding: 100px 24px;
   scroll-margin-top: 130px;
+  position: relative;
 }
 
 .contact-me-section__title {
@@ -20,7 +21,7 @@
 
 .contact-me-section__inner {
   width: 100%;
-  max-width: 1050px;   
+  max-width: 1050px;
   margin: 0 auto;
 }
 
@@ -33,7 +34,6 @@
 }
 
 .contact-me-section__info {
-  flex: 0 1 520px;     
   max-width: 520px;
 
   p {
@@ -46,7 +46,6 @@
 }
 
 .contact-me-section__details {
-  flex: 0 0 360px;      
   width: 360px;
   display: flex;
   flex-direction: column;
@@ -77,10 +76,6 @@
   width: 100%;
 }
 
-.contact-me-section {
-  position: relative;
-}
-
 .contact-me-section__scrolltop {
   position: absolute;
   top: 158px;
@@ -94,4 +89,91 @@
 .contact-me-section__scrolltop:hover {
   transform: translateY(-4px);
   opacity: 0.8;
+}
+
+@media (max-width: 1100px) {
+  .contact-me-section {
+    padding: 90px 20px;
+  }
+
+  .contact-me-section__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-me-section__info {
+    max-width: none;
+  }
+
+  .contact-me-section__details {
+    width: auto;
+  }
+
+  .contact-me-section__scrolltop {
+    right: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-me-section__title {
+    font-size: 52px;
+    margin-bottom: 36px;
+  }
+
+  .contact-me-section__top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+
+  .contact-me-section__details {
+    gap: 14px;
+  }
+
+  .contact-me-section__scrolltop {
+    top: 120px;
+    right: 16px;
+    width: 32px;
+    height: 74px;
+  }
+}
+
+@media (max-width: 520px) {
+  .contact-me-section {
+    padding: 72px 16px;
+  }
+
+  .contact-me-section__title {
+    font-size: 44px;
+  }
+
+  .contact-me-section__info p {
+    font-size: 16px;
+  }
+
+  .contact-detail__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact-detail__text {
+    font-size: 16px;
+    word-break: break-word;
+  }
+
+  .contact-me-section__scrolltop {
+    top: 96px;
+    right: 12px;
+    width: 28px;
+    height: 64px;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-me-section__title {
+    font-size: 40px;
+  }
+
+  .contact-detail {
+    gap: 10px;
+  }
 }
