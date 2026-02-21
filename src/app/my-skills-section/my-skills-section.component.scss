@@ -62,7 +62,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background-image: url("/assets/img/myskills/background-shape.png");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,10 +76,24 @@
   text-align: center;
 }
 
+.my-skills-section__circle--desktop {
+  background-image: url("/assets/img/myskills/background-shape.png");
+  display: flex;
+}
+
+.my-skills-section__circle--mobile {
+  background-image: url("/assets/img/myskills/background-shape-mobile.png");
+  display: none;
+  width: 210px;
+  height: 210px;
+  padding: 0;
+  gap: 0;
+}
+
 .learning-title {
   font-family: 'Josefin Sans';
-  font-size: 18px;
-  color: #F8F5EC;
+  font-size: 22px;
+  color: #89BCD9;
   margin: 0;
 }
 
@@ -113,4 +127,196 @@
   line-height: 1.5;
   color: #F8F5EC;
   margin: 0;
+}
+
+.my-skills-section__cta {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.my-skills-section__cta a {
+  text-decoration: none;
+}
+
+.learning-mobile {
+  display: none;
+}
+
+.why-me-contact button,
+.my-skills-section__cta button {
+  background-color: #89BCD9;
+  color: #1a1a1a;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.why-me-contact button:hover,
+.my-skills-section__cta button:hover {
+  background-color: #78AAC6;
+}
+
+@media (max-width: 1200px) {
+  .my-skills-section {
+    padding: 88px 48px;
+  }
+
+  .my-skills-section__content {
+    gap: 48px;
+  }
+
+  .my-skills-section__grid {
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .my-skills-section {
+    padding: 80px 20px;
+  }
+
+  .my-skills-section__title {
+    margin-bottom: 36px;
+
+    h3 {
+      font-size: 56px;
+    }
+  }
+
+  .my-skills-section__content {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+
+  .my-skills-section__grid,
+  .my-skills-section__learning {
+    width: 100%;
+  }
+
+  .my-skills-section__grid {
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+    justify-items: center;
+  }
+
+  .my-skills-section__learning {
+    justify-content: flex-start;
+  }
+
+  .my-skills-section__circle--desktop {
+    display: none;
+  }
+
+  .learning-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .learning-title--mobile {
+    text-align: center;
+    margin: 0 0 14px 0;
+  }
+
+  .learning-mobile__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+  }
+
+  .learning-text--mobile {
+    width: 60%;
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .my-skills-section__circle--mobile {
+    display: grid;
+    place-items: center;
+  }
+
+  .my-skills-section__circle--mobile .learning-icons {
+    gap: 22px;
+  }
+
+  .my-skills-section__circle--mobile .learning-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .my-skills-section__circle--mobile .learning-item span {
+    font-size: 14px;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+
+  .my-skills-section__cta {
+    margin-top: 26px;
+  }
+
+  .my-skills-section__cta button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 520px) {
+  .my-skills-section__title h3 {
+    font-size: 44px;
+  }
+
+  .my-skills-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px 14px;
+  }
+
+  .my-skills-section__item img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .learning-text--mobile {
+    width: 58%;
+    font-size: 15px;
+  }
+
+  .my-skills-section__circle--mobile {
+    width: 180px;
+    height: 180px;
+  }
+
+  .my-skills-section__circle--mobile .learning-item img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 380px) {
+  .my-skills-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .learning-mobile__row {
+    align-items: flex-start;
+  }
+
+  .learning-text--mobile {
+    width: 56%;
+  }
+
+  .my-skills-section__circle--mobile {
+    width: 160px;
+    height: 160px;
+  }
 }
