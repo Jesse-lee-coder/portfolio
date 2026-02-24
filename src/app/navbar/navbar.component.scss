@@ -39,6 +39,11 @@
     font-family: 'Josefin Sans';
     font-size: 26px;
     cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: #F8F5EC;
   }
 }
 
@@ -47,17 +52,41 @@
   gap: 16px;
 
   button {
-    background-color: #89BCD9;
     border: none;
+    background-color: transparent;
+
     font-family: 'Josefin Sans';
     font-size: 16px;
     cursor: pointer;
-  }
-}
 
-button.active-lang {
-  background-color: white;
-  color: blue;
+    color: black;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 34px;
+    min-width: 44px;
+    padding: 0 14px;
+
+    border-radius: 999px;
+
+    transition: color 0.2s ease, transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  button:hover {
+    color: #F8F5EC;
+    transform: translateY(-1px);
+    opacity: 0.95;
+  }
+
+  button.active-lang {
+    color: #F8F5EC;
+    background-image: url("../../assets/img/hero/translations-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
 }
 
 @media screen and (max-width: 1470px) {

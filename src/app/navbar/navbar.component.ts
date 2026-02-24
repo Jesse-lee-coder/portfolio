@@ -17,11 +17,16 @@ export class NavbarComponent {
 
   constructor(private translate: TranslateService) {
     this.currentLang = this.translate.getCurrentLang() || 'de';
+
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang;
+    });
   }
 
   toggleTranslation(language: string) {
     this.translate.use(language);
-    this.currentLang = this.translate.getCurrentLang();
+    this.currentLang = language;
+    localStorage.setItem('lang', language);
   }
 }
 

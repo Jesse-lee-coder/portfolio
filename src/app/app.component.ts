@@ -23,8 +23,13 @@ export class AppComponent {
     this.translate.addLangs(['de', 'en']);
     this.translate.setFallbackLang('de');
 
+    const savedLang = localStorage.getItem('lang');
     const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang?.match(/de|en/) ? browserLang : 'de');
 
+    const initialLang =
+      savedLang ||
+      (browserLang?.match(/de|en/) ? browserLang : 'de');
+
+    this.translate.use(initialLang);
   }
 }

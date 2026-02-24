@@ -1,11 +1,9 @@
-<!-- Trigger Button (immer rechts oben) -->
 <button class="menu-trigger" type="button" (click)="toggleMenu()">
   <img [src]="iconSrc" alt="Burger Menu" />
 </button>
 
-<!-- Overlay -->
 <div class="menu-overlay" [class.open]="isOpen" (click)="closeMenu()">
-  <!-- Stop propagation: Klick in der Bubble soll NICHT schließen -->
+
   <div class="menu-bubble" (click)="$event.stopPropagation()">
     <nav class="menu-links">
       <a (click)="onNavigate('whyme')">{{ 'navbar.whyMe' | translate }}</a>
@@ -15,21 +13,9 @@
     </nav>
 
     <div class="menu-lang">
-      <button
-        type="button"
-        [class.active]="currentLang === 'de'"
-        (click)="toggleTranslation('de')"
-      >
-        DE
-      </button>
+      <button type="button" [class.active]="currentLang === 'de'" (click)="toggleTranslation('de')"> DE </button>
 
-      <button
-        type="button"
-        [class.active]="currentLang === 'en'"
-        (click)="toggleTranslation('en')"
-      >
-        EN
-      </button>
+      <button type="button" [class.active]="currentLang === 'en'" (click)="toggleTranslation('en')"> EN </button>
     </div>
   </div>
 </div>

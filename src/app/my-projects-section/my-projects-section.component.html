@@ -3,23 +3,17 @@
 
   <div class="projects__content">
 
-    <!-- Navbar (Tabs) -->
     <div class="projects__nav">
       @for (p of projects; track $index) {
-        <div
-          class="projects__nav-item"
-          [class.is-active]="$index === activeIndex"
-          (click)="setActive($index)">
+        <div class="projects__nav-item" [class.is-active]="$index === activeIndex" (click)="setActive($index)">
           <p class="projects__nav-name">{{ $index + 1 }}. {{ p.projectname }}</p>
         </div>
       }
     </div>
 
-    <!-- Active project panel -->
     <div class="projects__panel">
       <div class="projects__panel-inner">
 
-        <!-- LEFT: text blocks -->
         <div class="projects__left">
           <div class="projects__block">
             <span class="projects__dot"></span>
@@ -46,7 +40,6 @@
           </div>
         </div>
 
-        <!-- RIGHT: tech + image + buttons -->
         <div class="projects__right">
 
           <div class="projects__techrow">

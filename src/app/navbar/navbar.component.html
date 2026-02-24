@@ -1,12 +1,10 @@
 <div class="navbar-component">
   <div class="navbar-content">
 
-    <!-- Logo -->
     <div class="navbar-component-logo">
       <img src="assets/img/hero/name-logo.png" alt="logo">
     </div>
 
-    <!-- Navigation Links -->
     <div class="navbar">
       <a href="#whyme"> {{ 'navbar.whyMe' | translate }} </a>
       <a href="#skills"> {{ 'navbar.skills' | translate }} </a>
@@ -14,19 +12,13 @@
       <a href="#contact"> {{ 'navbar.contact' | translate }} </a>
     </div>
 
-    <!-- Language Switch -->
     <div class="navbar-component-switchlanguage">
-      <button
-        [class.active-lang]="currentLang === 'de'" (click)="toggleTranslation('de')"> DE
-      </button>
+      <button [class.active-lang]="currentLang === 'de'" (click)="toggleTranslation('de')"> DE </button>
 
-      <button
-        [class.active-lang]="currentLang === 'en'" (click)="toggleTranslation('en')"> EN
-      </button>
+      <button [class.active-lang]="currentLang === 'en'" (click)="toggleTranslation('en')"> EN </button>
     </div>
 
   </div>
 </div>
 
-<!-- Mobile Burger -->
 <app-navbar-menu></app-navbar-menu>

@@ -77,12 +77,12 @@
 }
 
 .my-skills-section__circle--desktop {
-  background-image: url("/assets/img/myskills/background-shape.png");
+  background-image: url("../../assets/img/myskills/background-shape.png");
   display: flex;
 }
 
 .my-skills-section__circle--mobile {
-  background-image: url("/assets/img/myskills/background-shape-mobile.png");
+  background-image: url("../../assets/img/myskills/background-shape-mobile.png");
   display: none;
   width: 210px;
   height: 210px;

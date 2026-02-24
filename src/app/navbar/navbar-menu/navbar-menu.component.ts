@@ -1,16 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Router, RouterModule } from '@angular/router';
 
 type Lang = 'de' | 'en';
 
 @Component({
   selector: 'app-navbar-menu',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './navbar-menu.component.html',
   styleUrl: './navbar-menu.component.scss',
 })
+
 export class NavbarMenuComponent implements OnDestroy {
   isOpen = false;
   private readonly iconDefault = 'assets/img/hero/burgermenu-default.png';
@@ -24,11 +26,11 @@ export class NavbarMenuComponent implements OnDestroy {
 
   private timers: number[] = [];
 
-  constructor(private translate: TranslateService) {
-    // ngx-translate: currentLang ist deprecated -> getCurrentLang()
-    const lang = (this.translate.getCurrentLang?.() || this.translate.defaultLang || 'de') as Lang;
-    this.currentLang = lang === 'en' ? 'en' : 'de';
-  }
+constructor(private translate: TranslateService, private router: Router) {
+  const saved = (localStorage.getItem('lang') as Lang | null);
+  const lang = (saved || (this.translate.getCurrentLang?.() || this.translate.defaultLang || 'de')) as Lang;
+  this.currentLang = lang === 'en' ? 'en' : 'de';
+}
 
   ngOnDestroy(): void {
     this.clearTimers();
@@ -57,8 +59,6 @@ export class NavbarMenuComponent implements OnDestroy {
 
   closeMenu(): void {
     this.clearTimers();
-
-    // reverse-ish animation: close -> burger2 -> burger1 -> default
     this.iconSrc = this.iconBurger2;
 
     this.timers.push(
@@ -71,21 +71,25 @@ export class NavbarMenuComponent implements OnDestroy {
     );
   }
 
-  // wenn man auf einen Link klickt -> schließen + smooth scroll
-  onNavigate(targetId: string): void {
+
+  onNavigate(fragment: string): void {
     this.closeMenu();
 
-    // smooth scroll (kleiner Delay, damit Overlay erst zugeht)
-    window.setTimeout(() => {
-      const el = document.getElementById(targetId);
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 80);
+    this.router.navigate(['/'], { fragment }).then(() => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          const el = document.getElementById(fragment);
+          el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    });
   }
 
-  toggleTranslation(lang: Lang): void {
-    this.translate.use(lang);
-    this.currentLang = lang;
-  }
+toggleTranslation(lang: Lang): void {
+  this.translate.use(lang);
+  this.currentLang = lang;
+  localStorage.setItem('lang', lang);
+}
 
   private lockScroll(): void {
     document.body.style.overflow = 'hidden';

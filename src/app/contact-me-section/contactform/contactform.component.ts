@@ -28,7 +28,7 @@ export class ContactformComponent {
   privacyAccepted = false;
 
   post = {
-    endPoint: 'https://meinewebseite.de/sendMail.php', // Hinzufügen
+    endPoint: 'https://jesse-lee-wauer.developerakademie.net/portfolio-public/sendMail.php', 
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: { 'Content-Type': 'text/plain' },

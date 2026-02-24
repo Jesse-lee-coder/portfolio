@@ -10,13 +10,5 @@ import { ContactformComponent } from './contactform/contactform.component';
   templateUrl: './contact-me-section.component.html',
   styleUrl: './contact-me-section.component.scss'
 })
-export class ContactMeSectionComponent {
-  scrollToTop(): void {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-}
-
-}
+export class ContactMeSectionComponent {}
 
