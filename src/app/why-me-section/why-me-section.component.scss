@@ -102,10 +102,6 @@
     gap: 48px;
   }
 
-  .why-me-title h3 {
-    font-size: 52px;
-  }
-
   .why-me-text span {
     font-size: 18px;
   }
@@ -125,7 +121,7 @@
   }
 
   .why-me-title h3 {
-    font-size: 44px;
+    font-size: 50px;
     margin-bottom: 28px;
   }
 
@@ -159,6 +155,7 @@
   }
 
   .why-me-text {
+    width: 75%;
     max-width: 520px;
 
     span {
@@ -174,6 +171,12 @@
       font-size: 16px;
       padding: 12px 26px;
     }
+  }
+}
+
+@media (max-width: 530px) {
+  .why-me-title h3 {
+    font-size: 44px;
   }
 }
 
