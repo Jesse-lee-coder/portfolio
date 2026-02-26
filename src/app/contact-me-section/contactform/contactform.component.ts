@@ -5,7 +5,6 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
 
-
 @Component({
   selector: 'app-contactform',
   standalone: true,
@@ -14,7 +13,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
-
   thankYouVisible = false;
   http = inject(HttpClient);
 
@@ -24,42 +22,37 @@ export class ContactformComponent {
     message: '',
   };
 
-  mailTest = true;
+  mailTest = false;
   privacyAccepted = false;
 
   post = {
-    endPoint: 'https://jesse-lee-wauer.developerakademie.net/portfolio-public/sendMail.php', 
+    endPoint: 'https://jesse-lee-wauer.developerakademie.net/portfolio-public/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: { 'Content-Type': 'text/plain' },
-      responseType: 'text' as const
-    }
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
   };
 
   onSubmit(ngForm: NgForm) {
-    const isValid = ngForm.submitted && ngForm.form.valid && this.privacyAccepted;
-
-    if (!isValid) return;
-
-    if (!this.mailTest) {
-      this.http
-        .post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: () => {
+          next: (response) => {
+
             ngForm.resetForm();
-            this.privacyAccepted = false;
-            this.showThankYou(5000);
           },
-          error: (error) => console.error('Fehler beim Senden:', error),
-          complete: () => console.info('send post complete')
+          error: (error) => {
+            console.error(error);
+          },
+          complete: () => console.info('send post complete'),
         });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
-      return;
+      ngForm.resetForm();
     }
-
-    ngForm.resetForm();
-    this.privacyAccepted = false;
-    this.showThankYou(4000);
   }
 
   private showThankYou(ms: number) {
@@ -68,15 +61,12 @@ export class ContactformComponent {
   }
 
   getCheckboxImage(privacyRef: any): string {
-  if (privacyRef.invalid && privacyRef.touched && !this.privacyAccepted) {
-    return 'assets/img/contactme/checkbox-error.png';
+    if (privacyRef.invalid && privacyRef.touched && !this.privacyAccepted) {
+      return 'assets/img/contactme/checkbox-error.png';
+    }
+    if (this.privacyAccepted) {
+      return 'assets/img/contactme/checkbox-checked.png';
+    }
+    return 'assets/img/contactme/checkbox-unchecked.png';
   }
-
-  if (this.privacyAccepted) {
-    return 'assets/img/contactme/checkbox-checked.png';
-  }
-
-  return 'assets/img/contactme/checkbox-unchecked.png';
-}
-
 }

@@ -6,9 +6,7 @@
 
 .projects {
   width: 100%;
-  max-width: 1440px;
   scroll-margin-top: 130px;
-  padding: 0 24px;
 }
 
 .projects__headline {
@@ -31,7 +29,6 @@
   width: 100%;
   align-items: stretch;
   color: #FFFDFD;
-  max-width: 1440px;
 }
 
 .projects__nav-item {
@@ -230,9 +227,6 @@
 }
 
 @media (max-width: 900px) {
-  .projects {
-    padding: 0 16px;
-  }
 
   .projects__headline {
     font-size: 46px;

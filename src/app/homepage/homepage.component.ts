@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HeroSectionComponent } from '../hero-section/hero-section.component';
+import { NavbarComponent } from '../navbar/navbar.component';
 import { WhyMeSectionComponent } from '../why-me-section/why-me-section.component';
 import { MySkillsSectionComponent } from '../my-skills-section/my-skills-section.component';
 import { MyProjectsSectionComponent } from '../my-projects-section/my-projects-section.component';
@@ -11,6 +12,7 @@ import { ContactMeSectionComponent } from "../contact-me-section/contact-me-sect
   standalone: true,
   imports: [
     HeroSectionComponent,
+    NavbarComponent,
     WhyMeSectionComponent,
     MySkillsSectionComponent,
     MyProjectsSectionComponent,
