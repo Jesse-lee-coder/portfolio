@@ -4,11 +4,9 @@
   max-width: 1440px;
   margin: 0 auto;
   min-height: auto;
-
   display: flex;
   align-items: flex-end;           
   gap: 64px;
-
 
   h1 {
     font-family: Anta;
@@ -42,7 +40,7 @@
   background-image: url('../../assets/img/hero/background-shape.png');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 90%;
   z-index: 0;
 }
 
@@ -127,7 +125,7 @@
   }
 
   .hero-portrait {
-    height: 624px;
+    height: 550px;
 
     img {
         width: 400px;
@@ -196,6 +194,11 @@
       object-position: 50% 35%; 
     }
   }
+
+  .hero-portrait::before {
+  content: "";
+  background-size: contain;
+}
 
   .hero-name {
     width: 100%;
