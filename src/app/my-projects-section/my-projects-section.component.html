@@ -1,75 +1,75 @@
 <section class="projects" id="projects">
-  <h3 class="projects__headline">{{ 'myProjects.header' | translate }}</h3>
+  <h3 class="projects__headline" data-aos="zoom-in-up">{{ 'myProjects.header' | translate }}</h3>
 
   <div class="projects__content">
 
-    <!-- NAV: nur diese soll begrenzt sein -->
     <div class="projects__nav-wrap">
       <div class="projects__nav">
         @for (p of projects; track $index) {
           <div class="projects__nav-item" [class.is-active]="$index === activeIndex" (click)="setActive($index)">
-            <p class="projects__nav-name">{{ $index + 1 }}. {{ p.projectname }}</p>
+            <p class="projects__nav-name" data-aos="fade-right" data-aos-delay="100">{{ $index + 1 }}. {{ p.projectname }}</p>
           </div>
         }
       </div>
     </div>
 
-    <!-- PANEL: soll Full-Width bleiben -->
     <div class="projects__panel">
-      <div class="projects__panel-inner">
+      <div class="projects__panel-wrap">
+        <div class="projects__panel-inner">
 
-        <div class="projects__left">
-          <div class="projects__block">
-            <span class="projects__dot"></span>
-            <div class="projects__text">
-              <h4>{{ 'myProjects.aboutTheProject' | translate }}</h4>
-              <p>{{ activeProject.content.aboutTheProject | translate }}</p>
+          <div class="projects__left">
+            <div class="projects__block" data-aos="fade-right">
+              <span class="projects__dot"></span>
+              <div class="projects__text">
+                <h4>{{ 'myProjects.aboutTheProject' | translate }}</h4>
+                <p>{{ activeProject.content.aboutTheProject | translate }}</p>
+              </div>
+            </div>
+
+            <div class="projects__block" data-aos="fade-right">
+              <span class="projects__dot"></span>
+              <div class="projects__text">
+                <h4>{{ 'myProjects.organisation' | translate }}</h4>
+                <p>{{ activeProject.content.organisation | translate }}</p>
+              </div>
+            </div>
+
+            <div class="projects__block" data-aos="fade-right">
+              <span class="projects__dot"></span>
+              <div class="projects__text">
+                <h4>{{ 'myProjects.whatILearned' | translate }}</h4>
+                <p>{{ activeProject.content.whatILearned | translate }}</p>
+              </div>
             </div>
           </div>
 
-          <div class="projects__block">
-            <span class="projects__dot"></span>
-            <div class="projects__text">
-              <h4>{{ 'myProjects.organisation' | translate }}</h4>
-              <p>{{ activeProject.content.organisation | translate }}</p>
+          <div class="projects__right">
+
+            <div class="projects__techrow">
+              <span class="projects__techlabel">{{ 'myProjects.technologies' | translate }}</span>
+              <div class="projects__techicons">
+                @for (icon of activeProject.images; track $index) {
+                  <img [src]="icon" alt="tech icon">
+                }
+              </div>
             </div>
+
+            <div class="projects__image" data-aos="zoom-in">
+              <img [src]="activeProject.imageProject" [alt]="activeProject.projectname">
+            </div>
+
+            <div class="projects__actions">
+              <a class="btn btn--primary" [href]="activeProject.livetest" target="_blank" rel="noreferrer" data-aos="zoom-in-up">
+                {{ 'myProjects.liveTest' | translate }}
+              </a>
+              <a class="btn btn--secondary" [href]="activeProject.github" target="_blank" rel="noreferrer" data-aos="zoom-in-up">
+                {{ 'myProjects.github' | translate }}
+              </a>
+            </div>
+
           </div>
 
-          <div class="projects__block">
-            <span class="projects__dot"></span>
-            <div class="projects__text">
-              <h4>{{ 'myProjects.whatILearned' | translate }}</h4>
-              <p>{{ activeProject.content.whatILearned | translate }}</p>
-            </div>
-          </div>
         </div>
-
-        <div class="projects__right">
-
-          <div class="projects__techrow">
-            <span class="projects__techlabel">{{ 'myProjects.technologies' | translate }}</span>
-            <div class="projects__techicons">
-              @for (icon of activeProject.images; track $index) {
-                <img [src]="icon" alt="tech icon">
-              }
-            </div>
-          </div>
-
-          <div class="projects__image">
-            <img [src]="activeProject.imageProject" [alt]="activeProject.projectname">
-          </div>
-
-          <div class="projects__actions">
-            <a class="btn btn--primary" [href]="activeProject.livetest" target="_blank" rel="noreferrer">
-              {{ 'myProjects.liveTest' | translate }}
-            </a>
-            <a class="btn btn--secondary" [href]="activeProject.github" target="_blank" rel="noreferrer">
-              {{ 'myProjects.github' | translate }}
-            </a>
-          </div>
-
-        </div>
-
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 <section class="my-skills-section" id="skills">
 
-  <div class="my-skills-section__title">
+  <div class="my-skills-section__title" data-aos="zoom-in-up">
     <h3>{{ 'mySkills.header' | translate }}</h3>
   </div>
 
@@ -8,7 +8,7 @@
 
     <div class="my-skills-section__grid">
       @for (item of skills; track $index) {
-        <div class="my-skills-section__item">
+        <div class="my-skills-section__item" data-aos="zoom-in">
           <img [src]="item.src" [alt]="item.label">
           <span>{{ item.label }}</span>
         </div>
@@ -23,7 +23,7 @@
           {{ 'mySkills.currentlyLearning.title' | translate }}
         </p>
 
-        <div class="learning-icons">
+        <div class="learning-icons" data-aos="zoom-in">
           @for (item of learning; track $index) {
             <div class="learning-item">
               <img [src]="item.src" [alt]="item.label">
