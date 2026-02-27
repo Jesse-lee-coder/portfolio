@@ -1,7 +1,5 @@
 :host {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
 }
 
 .projects {
@@ -31,8 +29,16 @@
   color: #FFFDFD;
 }
 
+.projects__nav-wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 .projects__nav-item {
-  flex: 1;
+  flex: 0 0 auto;
+  padding: 0 28px;
   min-height: 60px;
   display: flex;
   align-items: center;
@@ -130,7 +136,7 @@
 
 .projects__techlabel {
   font-family: 'Josefin Sans';
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 253, 253, 0.75);
 }
 
@@ -239,7 +245,7 @@
 
   .projects__nav-item {
     flex: 0 0 auto;
-    min-width: 140px;
+    min-width: 80px;
     min-height: 52px;
     background: transparent;
     border-top-left-radius: 18px;
@@ -332,7 +338,7 @@
 
   .projects__actions .btn {
     padding: 11px 18px;
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -342,9 +348,19 @@
   }
 
   .projects__nav-item {
-    min-width: 62px;
+    min-width: 40px;
     min-height: 48px;
+    padding: 0 4px;
   }
+
+  .projects__nav-name {
+      font-size: 18px;
+      padding-left: 2px;
+    }
+
+  .projects__nav-wrap {
+    padding: 0px 6px;
+}
 
   .projects__panel-inner {
     padding: 16px;
@@ -355,7 +371,7 @@
   }
 
   .projects__text p {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 

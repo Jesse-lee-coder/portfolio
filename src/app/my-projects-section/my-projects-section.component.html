@@ -3,14 +3,18 @@
 
   <div class="projects__content">
 
-    <div class="projects__nav">
-      @for (p of projects; track $index) {
-        <div class="projects__nav-item" [class.is-active]="$index === activeIndex" (click)="setActive($index)">
-          <p class="projects__nav-name">{{ $index + 1 }}. {{ p.projectname }}</p>
-        </div>
-      }
+    <!-- NAV: nur diese soll begrenzt sein -->
+    <div class="projects__nav-wrap">
+      <div class="projects__nav">
+        @for (p of projects; track $index) {
+          <div class="projects__nav-item" [class.is-active]="$index === activeIndex" (click)="setActive($index)">
+            <p class="projects__nav-name">{{ $index + 1 }}. {{ p.projectname }}</p>
+          </div>
+        }
+      </div>
     </div>
 
+    <!-- PANEL: soll Full-Width bleiben -->
     <div class="projects__panel">
       <div class="projects__panel-inner">
 

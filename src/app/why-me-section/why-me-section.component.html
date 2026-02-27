@@ -26,7 +26,7 @@
       <span>{{ 'whyMe.text' | translate }}</span>
 
       <div class="why-me-contact desktop-only">
-        <a href="#contact">
+        <a [routerLink]="['/']" fragment="contact">
           <button>
             {{ 'whyMe.contactButton' | translate }}
           </button>

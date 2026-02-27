@@ -71,25 +71,16 @@ constructor(private translate: TranslateService, private router: Router) {
     );
   }
 
-
   onNavigate(fragment: string): void {
     this.closeMenu();
-
-    this.router.navigate(['/'], { fragment }).then(() => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          const el = document.getElementById(fragment);
-          el?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      });
-    });
+    this.router.navigate(['/'], { fragment });
   }
 
-toggleTranslation(lang: Lang): void {
-  this.translate.use(lang);
-  this.currentLang = lang;
-  localStorage.setItem('lang', lang);
-}
+  toggleTranslation(lang: Lang): void {
+    this.translate.use(lang);
+    this.currentLang = lang;
+    localStorage.setItem('lang', lang);
+  }
 
   private lockScroll(): void {
     document.body.style.overflow = 'hidden';

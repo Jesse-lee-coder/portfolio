@@ -6,10 +6,10 @@
     </div>
 
     <div class="navbar">
-      <a href="#whyme"> {{ 'navbar.whyMe' | translate }} </a>
-      <a href="#skills"> {{ 'navbar.skills' | translate }} </a>
-      <a href="#projects"> {{ 'navbar.projects' | translate }} </a>
-      <a href="#contact"> {{ 'navbar.contact' | translate }} </a>
+      <a [routerLink]="['/']" fragment="whyme"> {{ 'navbar.whyMe' | translate }} </a>
+      <a [routerLink]="['/']" fragment="skills"> {{ 'navbar.skills' | translate }} </a>
+      <a [routerLink]="['/']" fragment="projects"> {{ 'navbar.projects' | translate }} </a>
+      <a [routerLink]="['/']" fragment="contact"> {{ 'navbar.contact' | translate }} </a>
     </div>
 
     <div class="navbar-component-switchlanguage">

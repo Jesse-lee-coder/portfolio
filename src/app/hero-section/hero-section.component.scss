@@ -1,12 +1,14 @@
 .hero-container {
   position: relative;
+  width: 100%;
   max-width: 1440px;
-  min-height: calc(100vh - 104px);
-  height: auto;
+  margin: 0 auto;
+  min-height: auto;
+
   display: flex;
-  align-items: center;
-  margin: auto;
+  align-items: flex-end;           
   gap: 64px;
+
 
   h1 {
     font-family: Anta;
@@ -112,20 +114,20 @@
 }
 
 .hero-wrapper {
+  height: calc(100vh - 104px);     
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin: auto;
+  justify-content: flex-end;      
+  align-items: stretch;
+  margin: 0;
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1250px) {
   .hero-container {
     gap: 32px;
   }
 
   .hero-portrait {
-    height: 520px;
+    height: 624px;
 
     img {
         width: 400px;
@@ -230,6 +232,26 @@
   }
 }
 
+@media (max-width: 530px) {
+ 
+  .hero-container h1 {
+    font-size: 40px;
+  }
+
+  .hero-container h2 {
+    font-size: 18px;
+  }
+
+  .hero-name {
+    width: 70%;
+    margin-top: 10px;
+  }
+
+  .hero-arrow {
+    bottom: 85px;
+    }
+}
+
 @media (max-width: 420px) {
   .hero-container {
     padding-top: 110px;
@@ -253,10 +275,10 @@
   }
 
   .hero-container h1 {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .hero-container h2 {
-    font-size: 18px;
+    font-size: 16px;
   }
 }

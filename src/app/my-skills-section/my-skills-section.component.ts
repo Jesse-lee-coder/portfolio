@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 type Skill = { src: string; label: string };
 
 @Component({
   selector: 'app-my-skills-section',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule, RouterModule],
   templateUrl: './my-skills-section.component.html',
   styleUrl: './my-skills-section.component.scss'
 })
