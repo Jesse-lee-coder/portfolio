@@ -1,5 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FooterComponent } from './footer/footer.component';
@@ -14,7 +14,10 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent implements AfterViewInit {
   title = 'portfolio';
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private viewportScroller: ViewportScroller
+  ) {
     this.translate.addLangs(['de', 'en']);
     this.translate.setFallbackLang('de');
 
@@ -38,7 +41,16 @@ export class AppComponent implements AfterViewInit {
         easing: 'ease-out-cubic',
         offset: 80,
       });
+
+      setTimeout(() => this.scrollToCurrentHash(), 50);
+
+      window.addEventListener('load', () => this.scrollToCurrentHash(), { once: true });
     }, 0);
   }
 
+  private scrollToCurrentHash(): void {
+    const hash = window.location.hash?.replace('#', '');
+    if (!hash) return;
+    this.viewportScroller.scrollToAnchor(hash);
+  }
 }
